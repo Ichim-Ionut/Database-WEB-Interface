@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="curs8.Controller">
+   <children>
+      <TabPane layoutX="16.0" layoutY="14.0" prefHeight="553.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_students" text="Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="46.0" text="Datele din tabela students" />
+                        <Button fx:id="buton_IncarcareStudents" layoutX="676.0" layoutY="42.0" mnemonicParsing="false" onAction="#incarcaStudenti" text="Incarcare students" />
+                        <TableView fx:id="tabela_students" layoutX="14.0" layoutY="75.0" prefHeight="300.0" prefWidth="774.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idstudent" prefWidth="89.59997177124023" text="idstudent" />
+                            <TableColumn fx:id="atribut_numeStudent" prefWidth="191.2000274658203" text="Nume" />
+                              <TableColumn fx:id="atribut_prenumeStudent" prefWidth="149.5999755859375" text="Prenume" />
+                              <TableColumn fx:id="atribut_adresaStudent" prefWidth="275.199951171875" text="Adresa" />
+                              <TableColumn fx:id="atribut_varstaStudent" prefWidth="70.39990234375" text="Varsta" />
+                          </columns>
+                        </TableView>
+                        <TabPane layoutX="14.0" layoutY="380.0" prefHeight="130.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Adauga">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="field_numeStudent" layoutX="14.0" layoutY="38.0" />
+                                          <TextField fx:id="field_prenumeStudent" layoutX="173.0" layoutY="38.0" />
+                                          <TextField fx:id="field_adresaStudent" layoutX="331.0" layoutY="38.0" />
+                                          <TextField fx:id="field_varstaStudent" layoutX="490.0" layoutY="38.0" />
+                                          <Button fx:id="buton_adaugaStudent" layoutX="640.0" layoutY="64.0" mnemonicParsing="false" onAction="#adaugaStudent" text="Adauga Student" />
+                                          <Label layoutX="14.0" layoutY="14.0" text="Nume" />
+                                          <Label layoutX="173.0" layoutY="14.0" text="Prenume" />
+                                          <Label layoutX="331.0" layoutY="14.0" text="Adresa" />
+                                          <Label layoutX="490.0" layoutY="14.0" text="Varsta" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                            <Tab text="Sterge">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="31.0" layoutY="21.0" text="Id Student" />
+                                          <TextField fx:id="field_idStudentDelete" layoutX="31.0" layoutY="51.0" />
+                                          <Button fx:id="buton_stergereStudent" layoutX="659.0" layoutY="64.0" mnemonicParsing="false" onAction="#stergeStudent" text="Sterge Student" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Modifica">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="field_numeStudentUpdate" layoutX="113.0" layoutY="38.0" />
+                                          <TextField fx:id="field_prenumeStudentUpdate" layoutX="273.0" layoutY="38.0" />
+                                          <TextField fx:id="field_adresaStudentUpdate" layoutX="432.0" layoutY="38.0" />
+                                          <TextField fx:id="field_varstaStudentUpdate" layoutX="592.0" layoutY="38.0" />
+                                          <Button fx:id="buton_modificaStudent" layoutX="634.0" layoutY="75.0" mnemonicParsing="false" onAction="#modificaStudent" text="Modifica Student" />
+                                          <Label layoutX="113.0" layoutY="14.0" text="Nume" />
+                                          <Label layoutX="273.0" layoutY="14.0" text="Prenume" />
+                                          <Label layoutX="432.0" layoutY="14.0" text="Adresa" />
+                                          <Label layoutX="592.0" layoutY="14.0" text="Varsta" />
+                                          <TextField fx:id="field_idStudentUpdate" layoutX="4.0" layoutY="38.0" prefHeight="26.0" prefWidth="98.0" />
+                                          <Label layoutX="4.0" layoutY="14.0" text="Id Student" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_subjects" text="Subjects">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="42.0" text="Datele din tabela subjects" />
+                        <Button fx:id="buton_incarcareSubjects" layoutX="675.0" layoutY="38.0" mnemonicParsing="false" onAction="#incarcaSubjects" text="Incarcare subjects" />
+                        <TableView fx:id="tabela_subjects" layoutX="14.0" layoutY="74.0" prefHeight="300.0" prefWidth="774.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idsubject" prefWidth="75.0" text="idsubject" />
+                            <TableColumn fx:id="atribut_numeSubject" prefWidth="212.8000030517578" text="Nume" />
+                              <TableColumn fx:id="atribut_numarDeCredite" prefWidth="220.0" text="numarDeCredite" />
+                              <TableColumn fx:id="atribut_numarDeOre" prefWidth="257.5999755859375" text="numarDeOre" />
+                          </columns>
+                        </TableView>
+                        <TabPane layoutX="14.0" layoutY="384.0" prefHeight="138.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Adauga">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="field_numeSubject" layoutX="38.0" layoutY="55.0" />
+                                          <TextField fx:id="field_numarDeCrediteSubject" layoutX="210.0" layoutY="55.0" />
+                                          <Label layoutX="38.0" layoutY="31.0" text="Nume" />
+                                          <Label layoutX="210.0" layoutY="31.0" text="Numar de credite" />
+                                          <Label layoutX="377.0" layoutY="31.0" text="Numar de ore" />
+                                          <Button fx:id="buton_adaugaSubject" layoutX="564.0" layoutY="55.0" mnemonicParsing="false" onAction="#adaugaSubject" text="Adauga Subject" />
+                                          <TextField fx:id="field_numarDeOreSubject" layoutX="377.0" layoutY="55.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Sterge">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="buton_stergereSubject" layoutX="626.0" layoutY="42.0" mnemonicParsing="false" onAction="#stergeSubject" text="Sterge Subject" />
+                                          <TextField fx:id="field_idSubjectDelete" layoutX="51.0" layoutY="42.0" />
+                                          <Label layoutX="51.0" layoutY="25.0" text="Id Subject" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Modifica">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="field_idSubjectUpdate" layoutX="29.0" layoutY="42.0" />
+                                          <TextField fx:id="field_numeSubjectUpdate" layoutX="193.0" layoutY="42.0" />
+                                          <TextField fx:id="field_numarDeCrediteUpdate" layoutX="354.0" layoutY="42.0" />
+                                          <TextField fx:id="field_numarDeOreUpdate" layoutX="515.0" layoutY="42.0" />
+                                          <Button fx:id="buton_modificaSubject" layoutX="665.0" layoutY="71.0" mnemonicParsing="false" onAction="#modificaSubject" text="Modifica Subject" />
+                                          <Label layoutX="29.0" layoutY="25.0" text="Id Subject" />
+                                          <Label layoutX="193.0" layoutY="25.0" text="Nume" />
+                                          <Label layoutX="354.0" layoutY="25.0" text="Numar De Credite" />
+                                          <Label layoutX="515.0" layoutY="25.0" text="Numare De Ore" />
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_tests" text="Tests">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="42.0" text="Datele din tabela tests" />
+                        <TableView fx:id="tabela_tests" layoutX="14.0" layoutY="74.0" prefHeight="300.0" prefWidth="774.0">
+                           <columns>
+                              <TableColumn fx:id="atribut_idtest" prefWidth="75.0" text="idtest" />
+                              <TableColumn fx:id="atribut_testNumeStudent" prefWidth="175.2000274658203" text="Nume Student" />
+                              <TableColumn fx:id="atribut_testPrenumeStudent" prefWidth="160.800048828125" text="Prenume Student" />
+                              <TableColumn fx:id="atribut_testNumeSubject" prefWidth="108.79998779296875" text="Subject" />
+                              <TableColumn fx:id="atribut_nota" prefWidth="164.7999267578125" text="Nota" />
+                              <TableColumn fx:id="atribut_data" prefWidth="87.19998779296873" text="Data" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buton_IncarcareTests" layoutX="704.0" layoutY="38.0" mnemonicParsing="false" onAction="#incarcaTests" text="Incarca tests" />
+                        <TabPane layoutX="14.0" layoutY="380.0" prefHeight="130.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Adauga">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="field_idStudentTest" layoutX="14.0" layoutY="38.0" />
+                                          <TextField fx:id="field_idSubjectTest" layoutX="173.0" layoutY="38.0" />
+                                          <TextField fx:id="field_dataTest" layoutX="331.0" layoutY="38.0" />
+                                          <TextField fx:id="field_notaTest" layoutX="490.0" layoutY="38.0" />
+                                          <Button fx:id="buton_adaugaTest" layoutX="640.0" layoutY="64.0" mnemonicParsing="false" onAction="#adaugaTest" text="Adauga Test" />
+                                          <Label layoutX="14.0" layoutY="14.0" text="ID Student" />
+                                          <Label layoutX="173.0" layoutY="14.0" text="ID Subject" />
+                                          <Label layoutX="331.0" layoutY="14.0" text="Data" />
+                                          <Label layoutX="490.0" layoutY="14.0" text="Nota" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Sterge">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="31.0" layoutY="21.0" text="Id Test" />
+                                          <TextField fx:id="field_idTestDelete" layoutX="31.0" layoutY="51.0" />
+                                          <Button fx:id="buton_stergereTest" layoutX="659.0" layoutY="64.0" mnemonicParsing="false" onAction="#stergeTest" text="Sterge Test" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Modifica">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="field_idStudentTestUpdate" layoutX="113.0" layoutY="38.0" />
+                                          <TextField fx:id="field_idSubjectTestUpdate" layoutX="273.0" layoutY="38.0" />
+                                          <TextField fx:id="field_dataTestUpdate" layoutX="432.0" layoutY="38.0" />
+                                          <TextField fx:id="field_notaTestUpdate" layoutX="592.0" layoutY="38.0" />
+                                          <Button fx:id="buton_modificaTest" layoutX="634.0" layoutY="75.0" mnemonicParsing="false" onAction="#modificaTest" text="Modifica Test" />
+                                          <Label layoutX="113.0" layoutY="14.0" text="Id Student" />
+                                          <Label layoutX="273.0" layoutY="14.0" text="Id Subject" />
+                                          <Label layoutX="432.0" layoutY="14.0" text="Data" />
+                                          <Label layoutX="592.0" layoutY="14.0" text="Nota" />
+                                          <TextField fx:id="field_idTestUpdate" layoutX="4.0" layoutY="38.0" prefHeight="26.0" prefWidth="98.0" />
+                                          <Label layoutX="4.0" layoutY="14.0" text="Id Test" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
